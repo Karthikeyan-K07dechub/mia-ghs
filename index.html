@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Golden Harvest Scheme | Gold Saving &amp; Investment Plan | Mia by Tanishq</title>
+  <meta name="description" content="Explore Mia’s Golden Harvest Scheme, a smart gold saving scheme designed to help you plan your jewellery purchase with easy monthly instalments and added benefits.">
+  <link rel="canonical" href="https://www.miabytanishq.com/en_IN/golden-harvest-scheme">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=DM+Sans:wght@500&family=Fraunces:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="ghs-page">
+    <section class="ghs-hero" aria-labelledby="ghs-heading">
+      <div class="ghs-intro">
+        <p class="ghs-eyebrow ghs-tagline">A Step Towards Owning Your Dream Jewellery</p>
+        <h1 id="ghs-heading">Gold Harvest Scheme</h1>
+        <p class="ghs-description">Set aside a little something each month, and we'll pitch in a bonus when you're ready to shop. Forget about the stress that comes with daunting lump sums. Your 'someday' is about to turn into 'right now'! Unlock a smarter way to own jewellery you adore with Mia's <strong>Gold Harvest Scheme.</strong></p>
+        <div class="ghs-actions">
+          <a class="ghs-button" href="#savings-preview" id="explore-plan">Start the Dazzling Journey Now</a>
+          <button class="ghs-button ghs-button-secondary" type="button" id="how-it-works">Understand How it Works</button>
+        </div>
+      </div>
+
+      <div class="ghs-calculator" id="savings-preview" aria-labelledby="preview-heading">
+        <h2 class="ghs-eyebrow" id="preview-heading">Your Savings Preview</h2>
+        <div class="ghs-instalment">
+          <label for="monthly-instalment">Monthly Instalment</label>
+          <output for="monthly-instalment" id="monthly-amount">₹2,000</output>
+        </div>
+        <input class="ghs-range" id="monthly-instalment" type="range" min="1000" max="100000" step="1000" value="2000" aria-describedby="range-limits">
+        <div class="ghs-range-limits" id="range-limits"><span>₹1,000</span><span>₹1,00,000</span></div>
+        <div class="ghs-presets" role="group" aria-label="Choose a monthly instalment">
+          <button type="button" data-amount="1000" aria-pressed="false">₹1,000</button>
+          <button type="button" data-amount="2000" aria-pressed="true">₹2,000</button>
+          <button type="button" data-amount="5000" aria-pressed="false">₹5,000</button>
+          <button type="button" data-amount="10000" aria-pressed="false">₹10,000</button>
+          <button type="button" data-amount="25000" aria-pressed="false">₹25,000</button>
+        </div>
+        <div class="ghs-results" aria-live="polite" aria-atomic="true">
+          <div class="ghs-result"><span>You Save</span><output id="saved-amount" for="monthly-instalment">₹22,000</output></div>
+          <div class="ghs-result ghs-result-redeem"><span>You Redeem</span><output id="redeem-amount" for="monthly-instalment">₹24,000</output></div>
+        </div>
+        <p class="ghs-gift">Mia's gift: <span id="gift-amount">+₹2,000</span> bonus in month 12</p>
+        <div class="ghs-summary">
+          <h3 class="ghs-eyebrow">Plan Summary</h3>
+          <dl>
+            <div><dt>Monthly instalment</dt><dd id="summary-monthly">₹2,000</dd></div>
+            <div><dt>You pay (11 months)</dt><dd id="summary-saved">₹22,000</dd></div>
+            <div><dt>Mia's bonus contribution</dt><dd class="ghs-pink" id="summary-bonus">+₹2,000</dd></div>
+            <div class="ghs-summary-total"><dt>Total jewellery value</dt><dd id="summary-total">₹24,000</dd></div>
+          </dl>
+          <button class="ghs-button ghs-start-plan" id="start-plan" type="button">Start this Plan</button>
+        </div>
+      </div>
+    </section>
+    <section class="ghs-contact ghs-container" aria-labelledby="contact-heading">
+      <div class="ghs-contact-header">
+        <p class="ghs-eyebrow">Begin Now</p>
+        <h2 id="contact-heading">Sparkle Era Starts Here</h2>
+        <p>Our experts are here to help you</p>
+      </div>
+      <form class="ghs-contact-form" id="contact-form">
+        <div class="ghs-field">
+          <label for="contact-name">Your Name</label>
+          <input id="contact-name" name="name" type="text" placeholder="Enter Your Name" autocomplete="name" maxlength="100" required>
+        </div>
+        <div class="ghs-field">
+          <label for="contact-phone">Phone Number</label>
+          <input id="contact-phone" name="phone" type="tel" placeholder="Enter Your Phone Number" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" required>
+        </div>
+        <div class="ghs-field">
+          <label for="contact-city">City</label>
+          <input id="contact-city" name="city" type="text" placeholder="Enter Your City" autocomplete="address-level2" maxlength="100" required>
+        </div>
+        <button class="ghs-button ghs-connect" type="submit">Connect Now!</button>
+        <p class="ghs-contact-status" id="contact-status" role="status" hidden></p>
+      </form>
+    </section>
+
+    <aside class="ghs-benefits" aria-label="Golden Harvest benefits">
+      <div class="ghs-benefits-track">
+      <ul>
+        <li>The Enduring TATA Trust</li>
+        <li>100% BIS Hallmarked Products</li>
+        <li>Bonus Upon Maturity</li>
+        <li>Flexible Tenure</li>
+        <li>Redemption Applicable on Gold, Diamonds, or Pearls</li>
+        <li>No Surprise Charges</li>
+      </ul>
+      </div>
+    </aside>
+
+    <section class="ghs-savings-banner ghs-container" aria-labelledby="savings-banner-heading">
+      <div class="ghs-banner-copy">
+        <p class="ghs-eyebrow"><span class="ghs-clock" aria-hidden="true"></span>Plan Your Savings in Time</p>
+        <h2 id="savings-banner-heading">Find your gleaming muse - plan your instalments &amp; check out our gift!</h2>
+        <p class="ghs-banner-description">Know exactly what you'll save each month. Watch your total grow with Mia's bonus added on top.</p>
+      </div>
+      <img class="ghs-banner-gift" src="assets/Mask%20group.png" width="138" height="146" alt="" loading="lazy">
+    </section>
+
+    <section class="ghs-about ghs-container" aria-labelledby="about-heading">
+      <div class="ghs-about-copy">
+        <p class="ghs-eyebrow">Mia by Tanishq’s Smarter Way to Own Wish-listed Gold</p>
+        <h2 id="about-heading">What is the Golden Harvest Scheme?</h2>
+        <div class="ghs-about-description">
+          <p>Dreaming in gold, but don't want the upfront payment stress? Our <strong>gold investment scheme</strong> makes authentic jewellery shopping effortless!</p>
+          <p>The <strong>Golden Harvest Scheme</strong> is Mia by Tanishq’s <strong>monthly savings plan</strong> that makes owning Pinterest-worthy gold jewellery simple, no matter your budget. You simply have to set aside a fixed amount every month for 11 months.</p>
+          <p>In the 12th month, Mia will add a bonus equal to one full instalment. So, you’ll get to shop for more than what you saved! The best part is that this gold scheme comes with no complex terms or hidden charges. It’s just a simple, trusted way to plan ahead for meaningful gold purchases.</p>
+          <p>Backed by the TATA trust, our 100% BIS hallmarked jewellery shall make your life occasions all the more special. Perfectly in time for celebrations to arrive, you’ll be ready to shine!</p>
+        </div>
+        <ul class="ghs-occasions" aria-label="Plan for your special moments">
+          <li><img src="assets/Gold%20Diamond%20Ring%203D%20Icon%20%E2%80%94%20Transparent.png" width="30" height="30" alt="" loading="lazy">Wedding Planning</li>
+          <li><img src="assets/3D%20Diya%20Icon.png" width="30" height="30" alt="" loading="lazy">Festive Gifting</li>
+          <li><img src="assets/3D%20Cake%20with%20Candles.png" width="30" height="30" alt="" loading="lazy">Milestone Celebrations</li>
+          <li><img src="assets/3D%20Yellow%20Heart%20Icon.png" width="30" height="30" alt="" loading="lazy">Everyday Gold Lovers</li>
+          <li><img src="assets/3D%20Gift%20Box%20with%20Ribbon.png" width="30" height="30" alt="" loading="lazy">Special Occasions</li>
+        </ul>
+        <div class="ghs-about-actions">
+          <a class="ghs-button ghs-about-start" href="#savings-preview" id="about-start-plan">Start My Plan</a>
+          <a class="ghs-gold-rate" href="https://www.miabytanishq.com/en_IN/gold-rate-today">Check Today's Gold Rate <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <aside class="ghs-scheme-card" aria-label="Golden Harvest plan details">
+        <div class="ghs-scheme-list">
+          <div class="ghs-scheme-detail">
+            <span class="ghs-scheme-icon"><img src="assets/Duration.png" width="32" height="32" alt="" loading="lazy"></span>
+            <dl><dt>Duration</dt><dd>11 + 1 Months</dd></dl>
+          </div>
+          <div class="ghs-scheme-detail">
+            <span class="ghs-scheme-icon"><img src="assets/Monthly%20Instalment%20Range.png" width="32" height="32" alt="" loading="lazy"></span>
+            <dl><dt>Monthly Instalment Range</dt><dd>₹1,000 - ₹1,00,000</dd></dl>
+          </div>
+          <div class="ghs-scheme-detail">
+            <span class="ghs-scheme-icon"><img src="assets/Mia%E2%80%99s%20Bonus%20at%20Maturity.png" width="32" height="32" alt="" loading="lazy"></span>
+            <dl><dt>Mia’s Bonus at Maturity</dt><dd>1 Month’s Amount Free</dd></dl>
+          </div>
+          <div class="ghs-scheme-detail">
+            <span class="ghs-scheme-icon"><img src="assets/Redemption.png" width="32" height="32" alt="" loading="lazy"></span>
+            <dl><dt>Redemption</dt><dd>Any Mia / Tanishq Store</dd></dl>
+          </div>
+          <div class="ghs-scheme-detail">
+            <span class="ghs-scheme-icon"><img src="assets/Enrolment%20Fee%20%E2%80%94%20pink%203D%20artwork.png" width="32" height="32" alt="" loading="lazy"></span>
+            <dl><dt>Enrolment Fee</dt><dd>Zero - Completely Free</dd></dl>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <section class="ghs-benefit-section ghs-container" aria-labelledby="benefits-heading">
+      <p class="ghs-eyebrow ghs-tagline">Benefits</p>
+      <h2 id="benefits-heading">Benefits of Mia’s Gold Saving Scheme</h2>
+      <p class="ghs-benefit-subtitle">Get closer to your dream jewellery, one easy month at a time</p>
+      <div class="ghs-benefit-card">
+        <div class="ghs-benefit-tabs" role="tablist" aria-label="Scheme benefits" aria-orientation="vertical">
+          <button type="button" role="tab" id="benefit-tab-1" aria-controls="benefit-panel-1" aria-selected="true" tabindex="0"><span>01</span>Flexibility with Monthly Savings</button>
+          <button type="button" role="tab" id="benefit-tab-2" aria-controls="benefit-panel-2" aria-selected="false" tabindex="-1"><span>02</span>Zero Joining Fee</button>
+          <button type="button" role="tab" id="benefit-tab-3" aria-controls="benefit-panel-3" aria-selected="false" tabindex="-1"><span>03</span>Bonus in the 12th Month</button>
+          <button type="button" role="tab" id="benefit-tab-4" aria-controls="benefit-panel-4" aria-selected="false" tabindex="-1"><span>04</span>Backed by TATA Trust</button>
+          <button type="button" role="tab" id="benefit-tab-5" aria-controls="benefit-panel-5" aria-selected="false" tabindex="-1"><span>05</span>Versatile Jewellery Range</button>
+          <button type="button" role="tab" id="benefit-tab-6" aria-controls="benefit-panel-6" aria-selected="false" tabindex="-1"><span>06</span>290+ Stores Near You</button>
+          <button type="button" role="tab" id="benefit-tab-7" aria-controls="benefit-panel-7" aria-selected="false" tabindex="-1"><span>07</span>Pay Your Way Without Skipping a Month</button>
+          <button type="button" role="tab" id="benefit-tab-8" aria-controls="benefit-panel-8" aria-selected="false" tabindex="-1"><span>08</span>Safe &amp; Risk-Free</button>
+        </div>
+        <div class="ghs-benefit-content">
+          <div class="ghs-benefit-panels" aria-live="polite" aria-atomic="true">
+            <article role="tabpanel" id="benefit-panel-1" aria-labelledby="benefit-tab-1" tabindex="0">
+              <p class="ghs-benefit-number" aria-hidden="true">01</p>
+              <h3>Flexibility with Monthly Savings</h3>
+              <p class="ghs-benefit-description">Pick a monthly amount that feels right to you — settle on any amount starting from ₹1,000 to ₹1,00,000. <strong>Mia’s gold purchase plan</strong> fits your life and circumstances; get to own your wish-listed jewellery without the need to drain your monthly budget. Let your plan be executed at your pace.</p>
+            </article>
+            <!-- Temporary editorial copy for benefits 2–8; replace with client-approved text. -->
+            <article role="tabpanel" id="benefit-panel-2" aria-labelledby="benefit-tab-2" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">02</p>
+              <h3>Zero Joining Fee</h3>
+              <p class="ghs-benefit-description">Start planning for your next jewellery purchase without a joining fee. Choose your monthly instalment and put your savings towards the pieces you love, with no enrolment cost added to your plan.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-3" aria-labelledby="benefit-tab-3" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">03</p>
+              <h3>Bonus in the 12th Month</h3>
+              <p class="ghs-benefit-description">Make your monthly savings go a little further. After 11 monthly instalments, Mia’s bonus contribution in month 12 adds one month’s amount to your jewellery purchase value, giving you more to look forward to.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-4" aria-labelledby="benefit-tab-4" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">04</p>
+              <h3>Backed by TATA Trust</h3>
+              <p class="ghs-benefit-description">Plan your jewellery purchase with the assurance of Mia by Tanishq and the enduring TATA trust. Explore BIS hallmarked gold jewellery and find a meaningful piece to mark your next special moment.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-5" aria-labelledby="benefit-tab-5" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">05</p>
+              <h3>Versatile Jewellery Range</h3>
+              <p class="ghs-benefit-description">From everyday favourites to celebration pieces, plan for jewellery that suits your style. Explore gold, diamond and pearl designs as you build your wish list for a future purchase.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-6" aria-labelledby="benefit-tab-6" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">06</p>
+              <h3>290+ Stores Near You</h3>
+              <p class="ghs-benefit-description">Bring your jewellery wish list to a Mia or Tanishq store and explore your options in person. A store expert can help you understand the plan and choose jewellery for the occasion you’re saving towards.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-7" aria-labelledby="benefit-tab-7" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">07</p>
+              <h3>Pay Your Way Without Skipping a Month</h3>
+              <p class="ghs-benefit-description">Build a monthly saving routine around your jewellery goals. Keep track of each instalment and ask your store expert about the available payment options to help you stay on schedule throughout your plan.</p>
+            </article>
+            <article role="tabpanel" id="benefit-panel-8" aria-labelledby="benefit-tab-8" tabindex="0" hidden>
+              <p class="ghs-benefit-number" aria-hidden="true">08</p>
+              <h3>Safe &amp; Risk-Free</h3>
+              <p class="ghs-benefit-description">Plan ahead for a jewellery purchase with a monthly amount you can budget for. Review the scheme terms, payment schedule and redemption conditions with a Mia expert so you can make an informed choice before enrolling.</p>
+            </article>
+          </div>
+          <div class="ghs-benefit-navigation" role="group" aria-label="Navigate benefits">
+            <button type="button" id="benefit-previous" aria-label="Previous benefit" disabled><span aria-hidden="true">←</span></button>
+            <button type="button" id="benefit-next" aria-label="Next benefit"><span aria-hidden="true">→</span></button>
+            <span id="benefit-counter" aria-label="Benefit 1 of 8">1 / 8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ghs-process ghs-container" aria-labelledby="process-heading">
+      <p class="ghs-eyebrow">Process</p>
+      <h2 id="process-heading">How the Monthly Scheme for Gold Works at Mia?</h2>
+      <p class="ghs-process-subtitle">From old treasures to modern sheen – take this beautifully simple journey with us!</p>
+      <ol class="ghs-process-steps">
+        <li>
+          <div class="ghs-process-copy">
+            <span class="ghs-process-number" aria-hidden="true">01</span>
+            <div><h3>Choose Your Instalment</h3><p>You can choose any amount between ₹1,000 – ₹1,00,000. Proceed to enrol at any Mia or Tanishq store in a matter of minutes, free of cost.</p></div>
+          </div>
+          <div class="ghs-process-visual">
+            <div class="ghs-process-range" aria-label="Monthly instalment range: 1,000 to 1,00,000 rupees"><span>₹1,000</span><span class="ghs-process-range-line" aria-hidden="true"></span><span>₹1,00,000</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="ghs-process-copy">
+            <span class="ghs-process-number" aria-hidden="true">02</span>
+            <div><h3>Pay the Chosen Amount for 11 Months</h3><p>You can complete your payment in the online mode via UPI, debit/credit card, or net banking. Make sure to set reminders to keep up with the instalments.</p></div>
+          </div>
+          <div class="ghs-process-visual">
+            <div class="ghs-process-payments">
+              <p class="ghs-payments-heading"><img src="assets/Monthly%20Instalment%20Range%20(1).png" width="48" height="48" alt="" loading="lazy">11 monthly payments</p>
+              <ol class="ghs-months" aria-label="Eleven monthly instalments"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li></ol>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ghs-process-copy">
+            <span class="ghs-process-number" aria-hidden="true">03</span>
+            <div><h3>Get the Maturity Benefit</h3><p>Mia will add a full month’s bonus on maturity. It’s going to be our little gift for you, so you can own your dream jewellery sooner.</p></div>
+          </div>
+          <div class="ghs-process-visual">
+            <div class="ghs-process-maturity">
+              <div class="ghs-maturity-months"><p>11 months</p><ol class="ghs-months ghs-months-small" aria-label="Eleven monthly instalments"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li></ol></div>
+              <div class="ghs-bonus-month"><p>1 bonus month</p><span>12</span><p>Mia's gift</p></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="ghs-process-copy">
+            <span class="ghs-process-number" aria-hidden="true">04</span>
+            <div><h3>Pick Your Mia Favourite</h3><p>Use the savings accumulated over the month alongside the bonus at any Mia or Tanishq store in India. Choose from an extensive collection of sentimental and stylish gold and diamond jewellery, designed for now.</p></div>
+          </div>
+          <div class="ghs-process-visual">
+            <div class="ghs-process-favourites">
+              <p class="ghs-eyebrow">Pick Your Favourite</p>
+              <ul>
+                <li><span><img src="assets/sparkles.png" width="18" height="18" alt="" loading="lazy"></span>Gold</li>
+                <li><span><img src="assets/diamond.png" width="18" height="18" alt="" loading="lazy"></span>Diamond</li>
+                <li><span><img src="assets/star.png" width="18" height="18" alt="" loading="lazy"></span>Platinum</li>
+                <li><span><img src="assets/award.png" width="18" height="18" alt="" loading="lazy"></span>24K Gold</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="ghs-explore ghs-container" aria-labelledby="explore-heading">
+      <p class="ghs-eyebrow">Keep Exploring</p>
+      <h2 id="explore-heading">More Ways to Grow Your Gold</h2>
+      <p class="ghs-explore-subtitle">Explore more ways to save, exchange and make your gold work towards something you’ll love.</p>
+      <div class="ghs-explore-cards">
+        <article class="ghs-explore-card ghs-explore-rate" aria-labelledby="explore-rate-heading">
+          <div class="ghs-explore-copy">
+            <h3 id="explore-rate-heading">Check Today’s Gold Rate</h3>
+            <p>Stay updated with live 22KT and 18KT gold rates as you plan your purchase.</p>
+          </div>
+          <a class="ghs-button ghs-explore-button" href="https://www.miabytanishq.com/en_IN/gold-rate-today">View Gold Rate <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="ghs-explore-card ghs-explore-exchange" aria-labelledby="explore-exchange-heading">
+          <img class="ghs-exchange-art" src="assets/Mask%20group%20(1).png" width="556" height="156" alt="" loading="lazy">
+          <div class="ghs-explore-copy">
+            <h3 id="explore-exchange-heading">Gold Exchange Program</h3>
+            <p>Turn Your Old Gold Jewellery into value towards a new Mia Favorite.</p>
+          </div>
+          <a class="ghs-button ghs-explore-button" href="https://www.miabytanishq.com/en_IN/gold-exchange-program.html">Explore GEP <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+    <section class="ghs-perfect ghs-container" aria-labelledby="perfect-heading">
+      <p class="ghs-eyebrow">Perfect For</p>
+      <h2 id="perfect-heading">Thoughtfully Plan Ahead for Sparkling Moments that Resonate</h2>
+      <div class="ghs-perfect-cards">
+        <article aria-labelledby="perfect-bridal-heading">
+          <p class="ghs-eyebrow" aria-hidden="true">01</p>
+          <h3 id="perfect-bridal-heading">Bridal Gift Arrangements</h3>
+          <p class="ghs-perfect-description">Start preparing 11 months ahead of the big day. Build your trousseau without the last-minute back-and-forth; enjoy Mia’s bonus month as our gift to celebrate the blessed new beginning!</p>
+        </article>
+        <article aria-labelledby="perfect-festive-heading">
+          <p class="ghs-eyebrow" aria-hidden="true">02</p>
+          <h3 id="perfect-festive-heading">Diwali &amp; Akshaya Tritiya</h3>
+          <p class="ghs-perfect-description">Set on participating in the ritual of buying gold on Akshaya Tritiya? It’s an auspicious occasion marked by the sacred gesture of gold purchase. With the best gold saving plan from Mia, you arrive ready to celebrate. There shall be no budget scramble, just stunning and meaningful new Mia jewellery!</p>
+        </article>
+        <article aria-labelledby="perfect-milestones-heading">
+          <p class="ghs-eyebrow" aria-hidden="true">03</p>
+          <h3 id="perfect-milestones-heading">Gifting &amp; Marking Milestones</h3>
+          <p class="ghs-perfect-description">What's a more thoughtful gift than gold for anniversaries, birthdays, or other such moments? Whether you're celebrating your daughter's graduation or your parents' anniversary, plan something meaningful without the usual finance-related hesitation.</p>
+        </article>
+      </div>
+    </section>
+    <section class="ghs-trust ghs-container" aria-labelledby="trust-heading">
+      <p class="ghs-eyebrow">Built to Be Trusted</p>
+      <h2 id="trust-heading">India’s Most Trusted Jewellery Brand</h2>
+      <ul class="ghs-trust-cards" aria-label="Mia by Tanishq in numbers">
+        <li>
+          <img src="assets/290%2B%20Stores%20in%20India.png" width="64" height="64" alt="" loading="lazy">
+          <p class="ghs-trust-number">290+</p>
+          <p class="ghs-trust-description">Stores in India</p>
+        </li>
+        <li>
+          <img src="assets/10%20Lakh%2B%20Golden%20Harvest%20Scheme%20Mebmers%20on%20Board.png" width="64" height="64" alt="" loading="lazy">
+          <p class="ghs-trust-number">10 Lakh+</p>
+          <p class="ghs-trust-description">Gold Harvest Scheme<br>Members on Board</p>
+        </li>
+        <li>
+          <img src="assets/30%2B%20Years%20of%20trusted%20Tanishq%20Heritage.png" width="64" height="64" alt="" loading="lazy">
+          <p class="ghs-trust-number">30+</p>
+          <p class="ghs-trust-description">Years of Trusted<br>Tanishq Heritage</p>
+        </li>
+        <li>
+          <img src="assets/100%25%20BIS%20Hallmarked%20Jewellery.png" width="64" height="64" alt="" loading="lazy">
+          <p class="ghs-trust-number">100%</p>
+          <p class="ghs-trust-description">BIS Hallmarked Jewellery</p>
+        </li>
+      </ul>
+    </section>
+    <section class="ghs-overview ghs-container" aria-labelledby="overview-heading">
+      <p class="ghs-eyebrow">Golden Harvest Scheme</p>
+      <h2 id="overview-heading">The Golden Harvest Scheme</h2>
+      <p class="ghs-overview-intro">The Golden Harvest Scheme allows customers to plan their jewellery purchase through monthly instalments, with an additional benefit from the company based on the month of purchase.</p>
+      <div class="ghs-overview-details">
+        <p class="ghs-eyebrow">Scheme Overview</p>
+        <h3 id="overview-details-heading">Key details of the Golden Harvest Scheme</h3>
+        <div class="ghs-overview-table-wrap">
+          <table class="ghs-overview-table" aria-labelledby="overview-details-heading">
+            <tbody>
+              <tr><th scope="row">Minimum Monthly Instalment</th><td><strong>₹2,000</strong></td></tr>
+              <tr><th scope="row">Scheme Tenure</th><td>10 months</td></tr>
+              <tr><th scope="row">Example Monthly Instalment</th><td>₹10,000</td></tr>
+              <tr><th scope="row">Total Customer Contribution</th><td>₹1,00,000</td></tr>
+              <tr><th scope="row">Company Benefit</th><td>Additional benefit based on the purchase month</td></tr>
+              <tr><th scope="row">Eligible Products</th><td>Gold, Diamond, Platinum &amp; other eligible jewellery/products</td></tr>
+              <tr><th scope="row">Alternative Purchase Option</th><td>24-karat gold with 99.99% purity</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="ghs-purchase-benefit ghs-container" aria-labelledby="purchase-benefit-heading">
+      <p class="ghs-eyebrow">Company Benefit by Purchase Month</p>
+      <h2 id="purchase-benefit-heading">Benefit varies by purchase month</h2>
+      <p class="ghs-purchase-intro">The company provides an additional benefit based on the month in which the customer makes the purchase. The benefit is calculated as a percentage of the first month's instalment. Example : ₹10,000 monthly instalment.</p>
+      <div class="ghs-chart-scroll" role="region" aria-label="Purchase-month benefit chart" tabindex="0">
+        <figure class="ghs-purchase-chart" aria-label="Company benefit for a ₹10,000 monthly instalment">
+          <span class="ghs-chart-axis-title" aria-hidden="true">Discount in %</span>
+          <div class="ghs-chart-plot">
+            <div class="ghs-chart-grid" aria-hidden="true">
+              <div style="--tick: 100"><span>100%</span></div>
+              <div style="--tick: 80"><span>80%</span></div>
+              <div style="--tick: 60"><span>60%</span></div>
+              <div style="--tick: 40"><span>40%</span></div>
+              <div style="--tick: 20"><span>20%</span></div>
+            </div>
+            <ul class="ghs-chart-bars">
+              <li style="--benefit: 21"><span class="ghs-chart-value">21% <span>(₹2100)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">7th month</span></li>
+              <li style="--benefit: 28"><span class="ghs-chart-value">28% <span>(₹2800)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">8th month</span></li>
+              <li style="--benefit: 35"><span class="ghs-chart-value">35% <span>(₹3500)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">9th month</span></li>
+              <li style="--benefit: 45"><span class="ghs-chart-value">45% <span>(₹4500)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">10th month</span></li>
+              <li style="--benefit: 55"><span class="ghs-chart-value">55% <span>(₹5500)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">11th month</span></li>
+              <li style="--benefit: 65"><span class="ghs-chart-value">65% <span>(₹6500)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">12th month</span></li>
+              <li style="--benefit: 75"><span class="ghs-chart-value">75% <span>(₹7500)</span></span><span class="ghs-chart-bar" aria-hidden="true"></span><span class="ghs-chart-month">13th month</span></li>
+            </ul>
+          </div>
+        </figure>
+      </div>
+    </section>
+    <section class="ghs-occasion-benefit ghs-container" aria-labelledby="occasion-benefit-heading">
+      <p class="ghs-eyebrow">Birthday &amp; Anniversary Benefit</p>
+      <h2 id="occasion-benefit-heading">Special benefits for special occasions</h2>
+      <div class="ghs-occasion-card">
+        <p class="ghs-occasion-intro">Customers can avail of a special birthday or wedding anniversary benefit if their own or their spouse's birthday/anniversary falls within 20 days before or after the purchase date.</p>
+        <div class="ghs-occasion-table-scroll" role="region" aria-label="Birthday and anniversary discount tiers" tabindex="0">
+          <div class="ghs-occasion-table-wrap">
+            <table class="ghs-occasion-table" aria-labelledby="occasion-benefit-heading">
+              <colgroup><col class="ghs-occasion-purchase-col"><col class="ghs-occasion-gold-col"><col></colgroup>
+              <thead>
+                <tr><th scope="col">Purchase Value</th><th scope="col">Gold Making Charges</th><th scope="col">Diamond Benefit</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">₹1.25 lakh or above</th><td>10% discount</td><td>10% discount on full bill value of diamond</td></tr>
+                <tr><th scope="row">Below ₹1.25 lakh</th><td>6% discount</td><td>6% discount on full bill value of diamond</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="ghs-occasion-conditions">
+          <h3 class="ghs-eyebrow">Important Clubbing Conditions</h3>
+          <ul>
+            <li>The 10%/6% birthday or anniversary discount cannot be clubbed with the ongoing offer.</li>
+            <li>The company-provided benefit on the instalment amount can be clubbed with the ongoing offer, subject to applicable terms and conditions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="ghs-products ghs-container" aria-labelledby="products-heading">
+      <p class="ghs-eyebrow">Product Eligibility</p>
+      <h2 id="products-heading">Eligible products</h2>
+      <p class="ghs-products-intro">The Golden Harvest Scheme benefit can be used across a wide range of eligible products.</p>
+      <ul class="ghs-product-cards">
+        <li><img src="assets/Gold%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Gold Jewellery</p></li>
+        <li><img src="assets/Diamond%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Diamond Jewellery</p></li>
+        <li><img src="assets/Platinum%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Platinum Jewellery</p></li>
+        <li><img src="assets/Group%20338.png" width="206" height="140" alt="" loading="lazy"><p>24K Gold</p></li>
+        <li><img src="assets/Other%20products%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Other Products</p></li>
+      </ul>
+      <p class="ghs-products-note">Note: If the customer does not find a jewellery product they wish to purchase, they can also opt for 24-karat gold with 99.99% purity.</p>
+    </section>
+    <section class="ghs-app ghs-container" aria-labelledby="app-heading">
+      <div class="ghs-app-copy">
+        <div class="ghs-app-intro">
+          <p class="ghs-eyebrow">Golden Harvest App</p>
+          <h2 id="app-heading">Track your scheme on the go</h2>
+          <p>The app gives customers an easy way to monitor their instalments and accumulated amount throughout the scheme.</p>
+        </div>
+        <ul class="ghs-app-features">
+          <li>
+            <h3><img src="assets/Instalment%20Details.png" width="32" height="32" alt="" loading="lazy">Instalment Details</h3>
+            <p>View instalments paid</p>
+          </li>
+          <li>
+            <h3><img src="assets/Scheme%20Tracking.png" width="32" height="32" alt="" loading="lazy">Scheme Tracking</h3>
+            <p>Keep track of scheme progress and numbers</p>
+          </li>
+          <li>
+            <h3><img src="assets/Accumulated%20Amount.png" width="32" height="32" alt="" loading="lazy">Accumulated Amount</h3>
+            <p>Track the amount accumulated under the scheme</p>
+          </li>
+        </ul>
+      </div>
+      <img class="ghs-app-phone" src="assets/Group%20369.png" width="165" height="239" alt="Golden Harvest app savings preview on a phone" loading="lazy">
+    </section>
+    <section class="ghs-compare ghs-container" aria-labelledby="compare-heading">
+      <p class="ghs-eyebrow">Compare</p>
+      <h2 id="compare-heading">Mia’s Gold Harvest Scheme Vs. Other Options for Savings</h2>
+      <div class="ghs-compare-scroll" role="region" aria-label="Savings options comparison table" tabindex="0">
+        <table class="ghs-compare-table" aria-labelledby="compare-heading">
+          <colgroup><col class="ghs-compare-feature-col"><col><col><col></colgroup>
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">Mia GHS</th><th scope="col">Fixed Deposit</th><th scope="col">SIP / Mutual Fund</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Purpose</th><td>Plan your jewellery purchase ahead of time</td><td>Savings and interest returns</td><td>Long-term wealth generation</td></tr>
+            <tr><th scope="row">Bonus / Extra Benefit</th><td>1 month instalment free<br>of cost, from Mia</td><td>Only interest income</td><td>Market-related returns</td></tr>
+            <tr><th scope="row">You Get</th><td>BIS hallmarked gold &amp;<br>diamond jewellery</td><td>Cash</td><td>Cash</td></tr>
+            <tr><th scope="row">Market or Investment Risk</th><td>None</td><td>None</td><td>Risk Applies</td></tr>
+            <tr><th scope="row">Condition for Lock-in Period</th><td>11 months</td><td>12–60 months, may differ by the bank you choose</td><td>Typically none</td></tr>
+            <tr><th scope="row">Minimum Monthly Amount</th><td>₹1,000/month</td><td>Differs by the bank you choose</td><td>₹500 SIP</td></tr>
+            <tr><th scope="row">Brand or Backing</th><td>TATA Group, Tanishq. RBI</td><td>Bank</td><td>AMC or a Fund house</td></tr>
+            <tr><th scope="row">Best For</th><td>Weddings, festivals, gifting</td><td>Emergency funds or for fixed returns</td><td>Long-term financial aims</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="ghs-journey ghs-container" aria-labelledby="journey-heading">
+      <p class="ghs-eyebrow">Your dream jewellery is just an exchange deal away</p>
+      <h2 id="journey-heading">Let the Gleaming Journey Begin</h2>
+      <p class="ghs-journey-intro">Set aside a little today, and watch your golden dreams bloom tomorrow. We, at Mia, shall walk beside your journey as every monthly step brings you closer to the sparkle you’ve always desired.</p>
+      <div class="ghs-journey-grid">
+        <div class="ghs-journey-trust">
+          <h3>Why Choose Mia</h3>
+          <ul>
+            <li><span class="ghs-journey-badge ghs-badge-tata"><img src="assets/Group%201171281457.png" alt="" loading="lazy"></span>TATA Backed</li>
+            <li><span class="ghs-journey-badge"><img src="assets/Group%201171281458.png" alt="" loading="lazy"></span>BIS Hallmarked</li>
+            <li><span class="ghs-journey-badge"><img src="assets/Group%201171281459.png" alt="" loading="lazy"></span>750+ Stores</li>
+            <li><span class="ghs-journey-badge ghs-badge-cost"><img src="assets/Group%201171281460.png" alt="" loading="lazy"></span>No Hidden Costs</li>
+            <li><span class="ghs-journey-badge ghs-badge-risk"><img src="assets/Group%201171281461.png" alt="" loading="lazy"></span>No Financial Risk</li>
+          </ul>
+        </div>
+        <div class="ghs-journey-actions">
+          <div class="ghs-journey-card">
+            <img src="assets/Enrol.png" width="48" height="48" alt="" loading="lazy">
+            <div><button class="ghs-journey-link" id="journey-enrol" type="button">Enroll</button><p>Start your journey and begin setting aside time for yourself.</p></div>
+          </div>
+          <div class="ghs-journey-card">
+            <img src="assets/Locate%20a%20nearby%20store.png" width="48" height="48" alt="" loading="lazy">
+            <div><a class="ghs-journey-link" href="https://www.miabytanishq.com/en_IN/store-locator/find">Locate a nearby store</a><p>Find a store close to you and plan a visit when the moment feels right.</p></div>
+          </div>
+          <div class="ghs-journey-card ghs-journey-call">
+            <img src="assets/Call%20Us%20artwork.png" width="48" height="48" alt="" loading="lazy">
+            <div><a class="ghs-journey-link" href="tel:18002660123">Call us</a><p>Speak with us when you are ready for a more personal conversation.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ghs-style ghs-container" aria-labelledby="style-heading">
+      <p class="ghs-eyebrow">Explore Modern &amp; Trendy Jewellery for Everyday</p>
+      <h2 id="style-heading">Upgrade Your Style &amp; Story</h2>
+      <p>Your gold exchange value is redeemable across Mia's complete jewellery range. Discover stunning options across gold and diamonds; from everyday to festive and beyond!</p>
+    </section>
+    <section class="ghs-faq ghs-container" aria-labelledby="faq-heading">
+      <div class="ghs-faq-intro">
+        <p class="ghs-eyebrow">FAQs</p>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        <p>Have more questions? Visit your nearest Mia store or reach us online - we're always here.</p>
+      </div>
+      <div class="ghs-faq-items">
+        <details name="ghs-faq" open>
+          <summary>Is there a penalty for missing a monthly payment with the Mia’s Golden Harvest scheme?</summary>
+          <p>On missing a golden harvest instalment payment for a specific month, you’ll have to pay the pending value in the following month (+that month’s amount). However, upon constantly missing the gold harvest scheme payments, your eligibility for Mia’s bonus will be affected.</p>
+        </details>
+        <details name="ghs-faq">
+          <summary>Can I cancel the Mia Golden Harvest jewellery purchase plan before maturity?</summary>
+          <!-- Temporary answer: replace with client-approved cancellation terms. -->
+          <p>Please contact your nearest Mia store for the cancellation terms that apply to your plan.</p>
+        </details>
+        <details name="ghs-faq">
+          <summary>Can I buy diamond or pearl jewellery with the gold investment plan maturity amount?</summary>
+          <!-- Temporary answer: replace with client-approved product eligibility wording. -->
+          <p>Please contact your nearest Mia store to confirm which diamond or pearl jewellery is eligible under your plan.</p>
+        </details>
+        <details name="ghs-faq">
+          <summary>How are the gold-buying schemes with Titan different from saving in bank accounts?</summary>
+          <!-- Temporary answer: replace with client-approved comparison wording. -->
+          <p>Please contact your nearest Mia store for an explanation of the scheme and how it differs from a bank savings account.</p>
+        </details>
+        <details name="ghs-faq">
+          <summary>Is Mia’s gold savings scheme online a financial product?</summary>
+          <!-- Temporary answer: replace with client-approved scheme classification wording. -->
+          <p>Please contact your nearest Mia store for the scheme’s official terms and classification.</p>
+        </details>
+      </div>
+    </section>
+    <section class="ghs-closing" aria-labelledby="closing-heading">
+      <div class="ghs-closing-content">
+        <p class="ghs-eyebrow">Begin Your Journey Today</p>
+        <h2 id="closing-heading">Your dream jewellery<br>Is <span>Closer Than You Think.</span></h2>
+        <p class="ghs-closing-description">Start with as little as ₹1,000 a month. Let Mia handle the bonus. You handle the memories.</p>
+        <div class="ghs-closing-actions">
+          <button class="ghs-closing-button ghs-closing-primary" id="closing-enrol" type="button">Enrol Now, It’s Free</button>
+          <a class="ghs-closing-button" id="closing-calculate" href="#savings-preview">Calculate My Benefit First</a>
+          <a class="ghs-closing-button" href="tel:18002660123">Call Us to Start Your Golden Harvest Plan</a>
+        </div>
+        <ul class="ghs-closing-trust" aria-label="Mia promises">
+          <li>TATA Backed</li>
+          <li>BIS Hallmarked</li>
+          <li>750+ Stores</li>
+          <li>No Hidden Costs</li>
+          <li>No Financial Risk</li>
+          <li>Walk-in Welcome</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="ghs-footer"><p>© 2026 Titan Company Limited. A TATA Enterprise.</p></footer>
+  <dialog class="ghs-dialog" id="plan-dialog" aria-labelledby="dialog-heading">
+    <form method="dialog"><button class="ghs-dialog-close" aria-label="Close" type="submit">×</button></form>
+    <h2 id="dialog-heading">How your plan works</h2>
+    <p id="dialog-copy"></p>
+    <form method="dialog"><button class="ghs-button" type="submit">Back to preview</button></form>
+  </dialog>
+</body>
+</html>

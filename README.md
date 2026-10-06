@@ -1,0 +1,47 @@
+# Mia Golden Harvest page
+
+The seventeenth section closes the page with a full-width #E8157A call to action, a 48px/60px Fraunces heading, three pill buttons, six trust labels and the supplied 2026 Titan copyright footer. Enrol uses the existing selected-plan preview and `ghs:enrol` integration; Calculate My Benefit First links back to the calculator and focuses its amount slider; Call Us uses the customer-service number already verified for section fifteen. Buttons stack below 900px. Copy and trust claims follow the supplied screenshot.
+
+The sixteenth handoff adds the Upgrade Your Style & Story introduction and the FAQ section. The desktop FAQ uses a 403px introduction column and 650px accordion column with a 50px gap; it stacks below 900px. Native details/summary controls support mouse and keyboard, show plus/minus indicators, and start with the first answer open. The shared details name allows one open answer at a time in supporting browsers. Questions use DM Sans 500 at 16px/22px, with Albert Sans answer text and 1px pink card borders. The first answer follows the screenshot; the other four use temporary store-contact wording explicitly approved by the client, with HTML comments marking them for replacement.
+
+The fifteenth section adds the supplied pink journey banner, five trust badges and three action cards. It has 40px desktop padding, 24px outer corners, and white cards with 1px pink borders and 20px corners. Transparent margins in three supplied badge exports are cropped with CSS. The layout stacks below 900px. Enroll reuses the selected-plan preview and cancellable `ghs:enrol` integration; Locate a nearby store opens https://www.miabytanishq.com/en_IN/store-locator/find, and Call us uses `tel:18002660123`, matching Mia's official customer-service details at https://www.miabytanishq.com/en_IN/faq. Trust wording and counts follow the screenshot, including its 750+ figure, which differs from the earlier supplied 290+ statistic. The following style section awaits its own design handoff.
+
+The tenth section shows the company benefit by purchase month as an HTML/CSS bar chart. The seven bars reproduce the supplied 21%, 28%, 35%, 45%, 55%, 65% and 75% values for months 7–13, with amounts based on the supplied ₹10,000 example. Heights share a consistent percentage scale. Labels remain real text in a semantic list; the focusable chart region scrolls horizontally on smaller screens. This is a static illustration independent of the calculator.
+
+The eleventh section reproduces the supplied birthday and anniversary eligibility wording, 10% and 6% discount tiers, and two clubbing conditions. The card has 24px padding, 16px corners and a 0.8px pink border. Its semantic three-column table has a pale pink header and scrolls within the card on mobile. Terms are transcribed from the supplied screenshots.
+
+The twelfth section, Product Eligibility, uses the five supplied product images with category labels and the supplied 24-karat gold note. Desktop images are 206px by 140px with 30px gaps, 12px corners and 1px pale pink borders. The grid switches to two columns below 900px.
+
+The thirteenth section, Golden Harvest App, includes three feature cards with the supplied 32px icons and phone artwork. Desktop cards have 1px pink borders, 16px corners and 40px gaps; the phone sits alongside the copy at 165px wide. Cards and phone stack below 900px. This section describes app features without a download action, as no download link was supplied.
+
+The fourteenth section compares Mia GHS, fixed deposits and SIP/mutual funds across eight supplied feature rows. It uses semantic column and row headers, Fraunces feature labels, a pink Mia header and column borders, and grey alternative headers. The table scrolls horizontally within a focusable region on smaller screens. All comparison claims are transcribed from the client design, including the risk and backing statements, and have not been independently verified. The final journey banner awaits its own design handoff.
+
+Open `index.html` in a browser. No build or installation is required.
+
+The page uses the supplied Figma specifications: Fraunces heading, Albert Sans body, Lato tagline, #E8157A accent, 520px calculator and 275px introduction buttons. It includes the first section, contact card, benefits strip and savings banner with the supplied images. Below 900px the layout adapts; the mobile layout is an adaptation because a mobile design was not supplied. Website navigation and later sections are outside this delivery.
+
+Google Fonts requires an internet connection; local system fonts serve as fallbacks. For production, use the site's approved font delivery.
+
+On larger screens, the section stays centred at a maximum width of 1150px, with a 50px column gap. Calculator padding remains 24px to follow the supplied measurements.
+
+The third section reproduces the supplied scheme explanation, five occasion badges and five plan details using the provided PNG assets. Its desktop columns are 717px and 343px with a 90px gap; they stack below 900px. Start My Plan returns to the calculator. The gold-rate link opens Mia's official `/en_IN/gold-rate-today` page. Scheme wording is transcribed from the client design.
+
+The fourth section contains eight benefit tabs and previous/next buttons. The arrows stop at the first and last benefit; selecting a row updates the panel and counter. Keyboard users can navigate tabs with Up/Down (Left/Right on mobile), Home and End. Below 900px the tabs become a horizontally scrollable list above the detail panel. Benefit 1 follows the supplied copy. Descriptions 2–8 are temporary editorial content, marked with an HTML comment in `index.html`, awaiting client-approved replacements. All copy stays in the HTML, so replacing it does not require JavaScript edits.
+
+The fifth section contains the four process steps, alternating text and diagrams on desktop with pink dividers. Each step's text precedes its illustration in the document and stacks in that order below 900px. Month chips and the amount-range illustration are static explanatory graphics, not interactive controls. The supplied calendar and four category icons are used. Copy follows the supplied screenshots.
+
+The sixth section contains two exploration cards using `Group 332.png`, `Rectangle 109.png` and `Mask group (1).png`. The cards sit side by side with a 38px gap on desktop and stack below 900px. Their links open Mia's official gold-rate and Gold Exchange Program pages. This section links to live rates; it does not fetch or display a rate itself.
+
+The seventh section, Perfect For, includes the three supplied occasion descriptions: bridal gifts, Diwali and Akshaya Tritiya, and milestone gifting. The desktop panel is inset 18.5px on each side of the 1150px container to match the 1113px reference width. It has a single 1px pink outer border, 1px dividers, and 24px accent lines. Columns stack below 900px, with horizontal dividers. Height can grow with text wrapping.
+
+The eighth section, Built to Be Trusted, reproduces the four supplied brand statistics using the provided PNG icons. Four white cards sit on a pale pink gradient with 40px desktop gaps and switch to a two-column grid below 900px. Figures and wording follow the client screenshot. The asset filename containing `Mebmers` is preserved as supplied.
+
+The ninth section contains the Golden Harvest Scheme introduction and seven-row overview table, with a 16px radius, 0.8px pink borders and 16px by 20px cell padding. The table uses semantic row headings and wraps within two columns on mobile. Content follows the supplied design: its ₹2,000 minimum and 10-month tenure differ from the earlier ₹1,000 minimum and 11-payment calculator. These supplied figures need content reconciliation before publishing; the earlier calculator is unchanged. The purchase-month benefit chart is part of the next section and awaits its design handoff.
+
+The calculator defaults to ₹2,000 and accepts ₹1,000–₹1,00,000 in ₹1,000 steps. Savings = 11 instalments; bonus = one instalment; total = 12 instalments, following the screenshot. Confirm the increment and actual eligibility/bonus rules before publishing.
+
+The journey button moves to the calculator. The explanation button opens an accessible dialog. Until the final enrolment destination is supplied, Start this Plan opens the selected-plan preview. Host code can listen for the cancellable `ghs:enrol` event on `#savings-preview`, call `event.preventDefault()`, and connect to the approved enrolment flow. Its `detail` includes `monthlyInstalment`, `savings`, `bonus` and `total`. No enrolment or payment is submitted.
+
+For integration into an existing site, include the `ghs-hero` section, dialog markup, CSS and script, and put SEO metadata in the host document head. Global box-sizing and body rules in the standalone stylesheet can be omitted if the host already provides them.
+
+The contact card validates required name, city and a 10-digit phone number. It does not submit or store personal data without a host integration. Listen for the cancellable `ghs:contact` event on `#contact-form` and call `event.preventDefault()` to handle the request using the approved endpoint; `detail` contains `name`, `phone` and `city`. Use `#contact-status` for the integration's actual success or error response. The standalone fallback says callback requests are unavailable and retains the fields. The form's endpoint and production consent requirements remain to be supplied.
