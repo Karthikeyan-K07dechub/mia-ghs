@@ -209,4 +209,16 @@
   benefitsTrack.appendChild(benefitsCopy);
   benefitsStrip.classList.add('ghs-benefits-animated');
   benefitsStrip.setAttribute('tabindex', '0');
+  function updateBenefitsSpacing() {
+    if (reducedMotion.matches) return;
+    const items = [...benefitsTrack.querySelector('ul').children];
+    const contentWidth = items.reduce((total, item) => total + item.getBoundingClientRect().width, 0);
+    // Include the gap from the last item to the next copy in the distribution.
+    const gap = Math.max(32, (benefitsStrip.clientWidth - contentWidth) / items.length);
+    benefitsTrack.style.setProperty('--benefits-gap', `${gap}px`);
+  }
+  updateBenefitsSpacing();
+  window.addEventListener('resize', updateBenefitsSpacing);
+  reducedMotion.addEventListener('change', updateBenefitsSpacing);
+  if (document.fonts) document.fonts.ready.then(updateBenefitsSpacing);
 })();

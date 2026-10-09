@@ -74,7 +74,7 @@ body { margin: 0; background: #fff; }
 @keyframes ghs-benefits-scroll { to { transform: translateX(-50%); } }
 .ghs-benefits.ghs-benefits-animated { overflow: hidden; padding-inline: 0; }
 .ghs-benefits-animated .ghs-benefits-track { display: flex; width: max-content; animation: ghs-benefits-scroll 40s linear infinite; }
-.ghs-benefits-animated .ghs-benefits-track > ul { display: flex; flex: 0 0 auto; justify-content: space-between; flex-wrap: nowrap; gap: 32px; width: max-content; min-width: 100vw; max-width: none; margin: 0; padding: 0 32px 0 0; }
+.ghs-benefits-animated .ghs-benefits-track > ul { display: flex; flex: 0 0 auto; justify-content: flex-start; flex-wrap: nowrap; gap: var(--benefits-gap, 32px); width: max-content; max-width: none; margin: 0; padding: 0 var(--benefits-gap, 32px) 0 0; }
 .ghs-benefits-animated .ghs-benefits-track li { flex-shrink: 0; white-space: nowrap; }
 .ghs-benefits-animated:hover .ghs-benefits-track, .ghs-benefits-animated:active .ghs-benefits-track, .ghs-benefits-animated:focus-within .ghs-benefits-track { animation-play-state: paused; }
 .ghs-savings-banner { position: relative; margin-top: 50px; margin-bottom: 120px; min-height: 136px; border-radius: 16px; background: linear-gradient(105deg, #ef3b98, #e8157a); }
