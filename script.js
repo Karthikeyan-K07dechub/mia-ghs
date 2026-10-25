@@ -7,7 +7,6 @@
     style: 'currency', currency: 'INR', maximumFractionDigits: 0
   });
   const format = amount => currency.format(amount);
-  const dialog = document.getElementById('plan-dialog');
 
   // Preview follows the supplied design: 11 payments + 1 instalment bonus.
   // Confirm production scheme rules and enrolment destination with the client.
@@ -40,37 +39,32 @@
     updatePreview();
   }));
 
-  document.getElementById('explore-plan').addEventListener('click', () => range.focus({ preventScroll: true }));
   document.getElementById('about-start-plan').addEventListener('click', () => range.focus({ preventScroll: true }));
 
-  function showExplanation(title, copy) {
-    document.getElementById('dialog-heading').textContent = title;
-    document.getElementById('dialog-copy').textContent = copy;
-    dialog.showModal();
-  }
-
-  document.getElementById('how-it-works').addEventListener('click', () => {
-    showExplanation('How your plan works', "Choose your monthly instalment and save for 11 months. The preview adds Mia's bonus contribution, equal to one monthly instalment, in month 12 to show your total jewellery value.");
-  });
 
   document.getElementById('start-plan').addEventListener('click', () => {
     const amount = Number(range.value);
-    // Host integration can handle this event and prevent the preview dialog.
+    // Host integration can handle this event and prevent the enrolment dialog.
     const event = new CustomEvent('ghs:enrol', {
       bubbles: true, cancelable: true,
       detail: { monthlyInstalment: amount, savings: amount * 11, bonus: amount, total: amount * 12 }
     });
     if (document.getElementById('savings-preview').dispatchEvent(event)) {
-      showExplanation('Your selected plan', `Your monthly instalment is ${format(amount)}. Over 11 months, you save ${format(amount * 11)}. With Mia's ${format(amount)} bonus in month 12, your preview jewellery value is ${format(amount * 12)}.`);
+      enrolDialog.showModal();
     }
   });
 
   const contactForm = document.getElementById('contact-form');
-  ['journey-enrol', 'closing-enrol'].forEach(id => {
+  const enrolDialog = document.getElementById('enrol-dialog');
+  const enrolForm = document.getElementById('enrol-form');
+  ['explore-plan', 'how-it-works', 'journey-enrol', 'closing-enrol'].forEach(id => {
     document.getElementById(id).addEventListener('click', () => {
-      document.getElementById('start-plan').click();
+      enrolDialog.showModal();
     });
   });
+  // No submission or navigation until the approved enrolment service is supplied.
+  enrolForm.addEventListener('submit', event => event.preventDefault());
+  enrolDialog.addEventListener('close', () => enrolForm.reset());
   document.getElementById('closing-calculate').addEventListener('click', () => range.focus({ preventScroll: true }));
   const contactStatus = document.getElementById('contact-status');
   ['contact-name', 'contact-city'].forEach(id => {

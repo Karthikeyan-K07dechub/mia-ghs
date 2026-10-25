@@ -20,8 +20,8 @@
         <h1 id="ghs-heading">Gold Harvest Scheme</h1>
         <p class="ghs-description">Set aside a little something each month, and we'll pitch in a bonus when you're ready to shop. Forget about the stress that comes with daunting lump sums. Your 'someday' is about to turn into 'right now'! Unlock a smarter way to own jewellery you adore with Mia's <strong>Gold Harvest Scheme.</strong></p>
         <div class="ghs-actions">
-          <a class="ghs-button" href="#savings-preview" id="explore-plan">Start the Dazzling Journey Now</a>
-          <button class="ghs-button ghs-button-secondary" type="button" id="how-it-works">Understand How it Works</button>
+          <button class="ghs-button" type="button" id="explore-plan" aria-haspopup="dialog" aria-controls="enrol-dialog">Start the Dazzling Journey Now</button>
+          <button class="ghs-button ghs-button-secondary" type="button" id="how-it-works" aria-haspopup="dialog" aria-controls="enrol-dialog">Understand How it Works</button>
         </div>
       </div>
 
@@ -53,7 +53,7 @@
             <div><dt>Mia's bonus contribution</dt><dd class="ghs-pink" id="summary-bonus">+₹2,000</dd></div>
             <div class="ghs-summary-total"><dt>Total jewellery value</dt><dd id="summary-total">₹24,000</dd></div>
           </dl>
-          <button class="ghs-button ghs-start-plan" id="start-plan" type="button">Start this Plan</button>
+          <button class="ghs-button ghs-start-plan" id="start-plan" type="button" aria-haspopup="dialog" aria-controls="enrol-dialog">Start this Plan</button>
         </div>
       </div>
     </section>
@@ -491,7 +491,8 @@
           <ul>
             <li><span class="ghs-journey-badge ghs-badge-tata"><img src="assets/Group%201171281457.png" alt="" loading="lazy"></span>TATA Backed</li>
             <li><span class="ghs-journey-badge"><img src="assets/Group%201171281458.png" alt="" loading="lazy"></span>BIS Hallmarked</li>
-            <li><span class="ghs-journey-badge"><img src="assets/Group%201171281459.png" alt="" loading="lazy"></span>750+ Stores</li>
+            <li><span class="ghs-journey-badge"><img src="assets/Group%201171281459.png" alt="" loading="lazy"></span>290+ Mia stores</li>
+            <li><span class="ghs-journey-badge"><img src="assets/Group%201171281459.png" alt="" loading="lazy"></span>Any Tanishq Store</li>
             <li><span class="ghs-journey-badge ghs-badge-cost"><img src="assets/Group%201171281460.png" alt="" loading="lazy"></span>No Hidden Costs</li>
             <li><span class="ghs-journey-badge ghs-badge-risk"><img src="assets/Group%201171281461.png" alt="" loading="lazy"></span>No Financial Risk</li>
           </ul>
@@ -499,7 +500,7 @@
         <div class="ghs-journey-actions">
           <div class="ghs-journey-card">
             <img src="assets/Enrol.png" width="48" height="48" alt="" loading="lazy">
-            <div><button class="ghs-journey-link" id="journey-enrol" type="button">Enroll</button><p>Start your journey and begin setting aside time for yourself.</p></div>
+            <div><button class="ghs-journey-link" id="journey-enrol" type="button" aria-haspopup="dialog" aria-controls="enrol-dialog">Enroll</button><p>Start your journey and begin setting aside time for yourself.</p></div>
           </div>
           <div class="ghs-journey-card">
             <img src="assets/Locate%20a%20nearby%20store.png" width="48" height="48" alt="" loading="lazy">
@@ -507,7 +508,7 @@
           </div>
           <div class="ghs-journey-card ghs-journey-call">
             <img src="assets/Call%20Us%20artwork.png" width="48" height="48" alt="" loading="lazy">
-            <div><a class="ghs-journey-link" href="tel:18002660123">Call us</a><p>Speak with us when you are ready for a more personal conversation.</p></div>
+            <div><h3 class="ghs-journey-call-title">Call us</h3><p class="ghs-journey-phone">1800-266-0123</p><p>Speak with us when you are ready for a more personal conversation.</p></div>
           </div>
         </div>
       </div>
@@ -556,14 +557,15 @@
         <h2 id="closing-heading">Your dream jewellery<br>Is <span>Closer Than You Think.</span></h2>
         <p class="ghs-closing-description">Start with as little as ₹1,000 a month. Let Mia handle the bonus. You handle the memories.</p>
         <div class="ghs-closing-actions">
-          <button class="ghs-closing-button ghs-closing-primary" id="closing-enrol" type="button">Enrol Now, It’s Free</button>
+          <button class="ghs-closing-button ghs-closing-primary" id="closing-enrol" type="button" aria-haspopup="dialog" aria-controls="enrol-dialog">Enrol Now, It’s Free</button>
           <a class="ghs-closing-button" id="closing-calculate" href="#savings-preview">Calculate My Benefit First</a>
-          <a class="ghs-closing-button" href="tel:18002660123">Call Us to Start Your Golden Harvest Plan</a>
+          <p class="ghs-closing-contact">Call us: <span>1800-266-0123</span></p>
         </div>
         <ul class="ghs-closing-trust" aria-label="Mia promises">
           <li>TATA Backed</li>
           <li>BIS Hallmarked</li>
-          <li>750+ Stores</li>
+          <li>290+ Mia stores</li>
+          <li>Any Tanishq Store</li>
           <li>No Hidden Costs</li>
           <li>No Financial Risk</li>
           <li>Walk-in Welcome</li>
@@ -572,6 +574,26 @@
     </section>
   </main>
   <footer class="ghs-footer"><p>© 2026 Titan Company Limited. A TATA Enterprise.</p></footer>
+  <dialog class="ghs-dialog ghs-enrol-dialog" id="enrol-dialog" aria-labelledby="enrol-heading">
+    <form method="dialog"><button class="ghs-dialog-close" aria-label="Close enrolment form" type="submit">×</button></form>
+    <h2 id="enrol-heading">Golden Harvest Enrolment</h2>
+    <!-- Provisional fields follow the existing lead form. Client approval and submission integration are pending. -->
+    <form class="ghs-enrol-form" id="enrol-form">
+      <div class="ghs-field">
+        <label for="enrol-name">Your Name</label>
+        <input id="enrol-name" name="name" type="text" autocomplete="name" maxlength="100" required autofocus>
+      </div>
+      <div class="ghs-field">
+        <label for="enrol-phone">Phone Number</label>
+        <input id="enrol-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" required>
+      </div>
+      <div class="ghs-field">
+        <label for="enrol-city">City</label>
+        <input id="enrol-city" name="city" type="text" autocomplete="address-level2" maxlength="100" required>
+      </div>
+      <button class="ghs-button" type="submit" disabled>Submit Enrolment</button>
+    </form>
+  </dialog>
   <dialog class="ghs-dialog" id="plan-dialog" aria-labelledby="dialog-heading">
     <form method="dialog"><button class="ghs-dialog-close" aria-label="Close" type="submit">×</button></form>
     <h2 id="dialog-heading">How your plan works</h2>
