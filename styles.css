@@ -54,6 +54,7 @@ body { margin: 0; background: #fff; }
 .ghs-dialog-close { position: absolute; top: 12px; right: 16px; border: 0; background: none; font-size: 28px; cursor: pointer; color: var(--ghs-muted); }
 .ghs-enrol-dialog { width: min(447px, calc(100% - 32px)); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); padding: 32px; overflow-y: auto; border: 1px solid #f0e6e0; border-radius: 16px; background: #fff; box-shadow: 0 1px 2px -1px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%); }
 .ghs-enrol-dialog .ghs-dialog-close { top: 6px; right: 6px; width: 32px; height: 32px; }
+.ghs-enrol-dialog { overscroll-behavior: contain; }
 .ghs-enrol-header { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
 .ghs-enrol-header > .ghs-eyebrow { margin: 0; color: var(--ghs-pink); font-weight: 600; line-height: 16px; }
 .ghs-enrol-header > h2 { margin: 0; font-size: 28px; font-weight: 600; line-height: 36px; }

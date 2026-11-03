@@ -52,13 +52,57 @@
     });
     if (document.getElementById('savings-preview').dispatchEvent(event)) {
       setEnrolPlan(plan);
-      enrolDialog.showModal();
+      openEnrolDialog();
     }
   });
 
   const contactForm = document.getElementById('contact-form');
   const enrolDialog = document.getElementById('enrol-dialog');
   const enrolForm = document.getElementById('enrol-form');
+  let enrolScrollLock = null;
+  function lockEnrolBackground() {
+    if (enrolScrollLock) return;
+    const body = document.body;
+    const root = document.documentElement;
+    const properties = ['position', 'top', 'left', 'width', 'overflow', 'padding-right'];
+    const scrollbarWidth = Math.max(0, window.innerWidth - root.clientWidth);
+    const paddingRight = parseFloat(window.getComputedStyle(body).paddingRight) || 0;
+    enrolScrollLock = {
+      x: window.scrollX,
+      y: window.scrollY,
+      bodyStyles: properties.map(property => [property, body.style.getPropertyValue(property), body.style.getPropertyPriority(property)]),
+      rootOverflow: [root.style.getPropertyValue('overflow'), root.style.getPropertyPriority('overflow')]
+    };
+    root.style.setProperty('overflow', 'hidden');
+    body.style.setProperty('position', 'fixed');
+    body.style.setProperty('top', `${-enrolScrollLock.y}px`);
+    body.style.setProperty('left', `${-enrolScrollLock.x}px`);
+    body.style.setProperty('width', '100%');
+    body.style.setProperty('overflow', 'hidden');
+    body.style.setProperty('padding-right', `${paddingRight + scrollbarWidth}px`);
+  }
+  function unlockEnrolBackground() {
+    if (!enrolScrollLock) return;
+    const saved = enrolScrollLock;
+    enrolScrollLock = null;
+    saved.bodyStyles.forEach(([property, value, priority]) => {
+      if (value) document.body.style.setProperty(property, value, priority);
+      else document.body.style.removeProperty(property);
+    });
+    if (saved.rootOverflow[0]) document.documentElement.style.setProperty('overflow', ...saved.rootOverflow);
+    else document.documentElement.style.removeProperty('overflow');
+    window.scrollTo({ left: saved.x, top: saved.y, behavior: 'instant' });
+  }
+  function openEnrolDialog() {
+    if (enrolDialog.open) return;
+    lockEnrolBackground();
+    try {
+      enrolDialog.showModal();
+    } catch (error) {
+      unlockEnrolBackground();
+      throw error;
+    }
+  }
   const enrolPlanSummary = document.getElementById('enrol-plan-summary');
   const enrolPlanKeys = ['monthlyInstalment', 'savings', 'bonus', 'total', 'instalments', 'currency'];
   function setEnrolPlan(plan) {
@@ -75,7 +119,7 @@
   ['explore-plan', 'how-it-works', 'journey-enrol', 'closing-enrol'].forEach(id => {
     document.getElementById(id).addEventListener('click', () => {
       setEnrolPlan(null);
-      enrolDialog.showModal();
+      openEnrolDialog();
     });
   });
   // Temporary visual preview. Set false to restore disabled submission.
@@ -156,6 +200,7 @@
   });
   enrolSuccessClose.addEventListener('click', () => enrolDialog.close());
   enrolDialog.addEventListener('close', () => {
+    unlockEnrolBackground();
     enrolForm.reset();
     setEnrolPlan(null);
     enrolValidationStarted = false;
