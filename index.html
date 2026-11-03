@@ -63,22 +63,31 @@
         <h2 id="contact-heading">Sparkle Era Starts Here</h2>
         <p>Our experts are here to help you</p>
       </div>
-      <form class="ghs-contact-form" id="contact-form">
+      <form class="ghs-contact-form" id="contact-form" novalidate>
         <div class="ghs-field">
           <label for="contact-name">Your Name</label>
           <input id="contact-name" name="name" type="text" placeholder="Enter Your Name" autocomplete="name" maxlength="100" required>
         </div>
         <div class="ghs-field">
           <label for="contact-phone">Phone Number</label>
-          <input id="contact-phone" name="phone" type="tel" placeholder="Enter Your Phone Number" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" required>
+          <input id="contact-phone" name="phone" type="tel" placeholder="Enter Your Phone Number" autocomplete="tel-national" inputmode="tel" maxlength="24" required>
         </div>
         <div class="ghs-field">
           <label for="contact-city">City</label>
           <input id="contact-city" name="city" type="text" placeholder="Enter Your City" autocomplete="address-level2" maxlength="100" required>
         </div>
-        <button class="ghs-button ghs-connect" type="submit">Connect Now!</button>
+        <div class="ghs-contact-submit">
+          <div class="ghs-enrol-errors" id="contact-errors" role="alert" hidden></div>
+          <button class="ghs-button ghs-connect" type="submit">Connect Now!</button>
+        </div>
         <p class="ghs-contact-status" id="contact-status" role="status" hidden></p>
       </form>
+      <div class="ghs-contact-success" id="contact-success" role="status" hidden>
+        <span class="ghs-enrol-success-icon" aria-hidden="true">✓</span>
+        <h3 id="contact-success-heading">Thank you!</h3>
+        <p>Your enquiry has been submitted successfully. Our experts will contact you shortly.</p>
+        <button class="ghs-button" id="contact-success-close" type="button">Close</button>
+      </div>
     </section>
 
     <aside class="ghs-benefits" aria-label="Golden Harvest benefits">
@@ -173,41 +182,41 @@
               <h3>Flexibility with Monthly Savings</h3>
               <p class="ghs-benefit-description">Pick a monthly amount that feels right to you — settle on any amount starting from ₹1,000 to ₹1,00,000. <strong>Mia’s gold purchase plan</strong> fits your life and circumstances; get to own your wish-listed jewellery without the need to drain your monthly budget. Let your plan be executed at your pace.</p>
             </article>
-            <!-- Temporary editorial copy for benefits 2–8; replace with client-approved text. -->
+            <!-- Benefits 2–8 follow the client-approved content handoff. -->
             <article role="tabpanel" id="benefit-panel-2" aria-labelledby="benefit-tab-2" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">02</p>
-              <h3>Zero Joining Fee</h3>
-              <p class="ghs-benefit-description">Start planning for your next jewellery purchase without a joining fee. Choose your monthly instalment and put your savings towards the pieces you love, with no enrolment cost added to your plan.</p>
+              <h3>No Upfront Cost, Always Easy</h3>
+              <p class="ghs-benefit-description">There’s no requirement for a joining fee or costs associated with paperwork charges. No hidden charges apply. Your first instalment is all you need to get started. Pay via a mode that you’re comfortable with; we accept UPI, net banking, and debit or credit card.</p>
             </article>
             <article role="tabpanel" id="benefit-panel-3" aria-labelledby="benefit-tab-3" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">03</p>
               <h3>Bonus in the 12th Month</h3>
-              <p class="ghs-benefit-description">Make your monthly savings go a little further. After 11 monthly instalments, Mia’s bonus contribution in month 12 adds one month’s amount to your jewellery purchase value, giving you more to look forward to.</p>
+              <p class="ghs-benefit-description">Save for 11 months, and a full month’s instalment shall be on us! Take this example for your better understanding: you can save ₹5,000 x 11 months and redeem ₹60,000 in jewellery. It’s how we thank our exclusive Golden Harvest members for their faith, loyalty, and dedication to aesthetics!</p>
             </article>
             <article role="tabpanel" id="benefit-panel-4" aria-labelledby="benefit-tab-4" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">04</p>
-              <h3>Backed by TATA Trust</h3>
-              <p class="ghs-benefit-description">Plan your jewellery purchase with the assurance of Mia by Tanishq and the enduring TATA trust. Explore BIS hallmarked gold jewellery and find a meaningful piece to mark your next special moment.</p>
+              <h3>Backed by the TATA Trust</h3>
+              <p class="ghs-benefit-description">Mia by Tanishq is part of Titan Company Limited, a TATA Group enterprise with 30+ years of jewellery expertise. Your savings are safe with us, and the jewellery you’ll buy is going to be 100% BIS Hallmarked. Rest assured that every transaction is secure.</p>
             </article>
             <article role="tabpanel" id="benefit-panel-5" aria-labelledby="benefit-tab-5" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">05</p>
-              <h3>Versatile Jewellery Range</h3>
-              <p class="ghs-benefit-description">From everyday favourites to celebration pieces, plan for jewellery that suits your style. Explore gold, diamond and pearl designs as you build your wish list for a future purchase.</p>
+              <h3>A Versatile Jewellery Range</h3>
+              <p class="ghs-benefit-description">Redeem the maturity amount on gold, diamonds, pearls, and more. Pick from 5000+ original and trendy BIS hallmarked designs — lightweight everyday pieces to statement bridal sets, we’ve got it all!</p>
             </article>
             <article role="tabpanel" id="benefit-panel-6" aria-labelledby="benefit-tab-6" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">06</p>
-              <h3>290+ Stores Near You</h3>
-              <p class="ghs-benefit-description">Bring your jewellery wish list to a Mia or Tanishq store and explore your options in person. A store expert can help you understand the plan and choose jewellery for the occasion you’re saving towards.</p>
+              <h3>290+ Stores, Always Near You</h3>
+              <p class="ghs-benefit-description">With 290+ Mia and Tanishq stores situated across India, redeeming your <strong>gold savings plan</strong> amount is a simple task. Walk into any of our stores, present your plan, and walk out with the jewellery you’ve been eyeing!</p>
             </article>
             <article role="tabpanel" id="benefit-panel-7" aria-labelledby="benefit-tab-7" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">07</p>
               <h3>Pay Your Way Without Skipping a Month</h3>
-              <p class="ghs-benefit-description">Build a monthly saving routine around your jewellery goals. Keep track of each instalment and ask your store expert about the available payment options to help you stay on schedule throughout your plan.</p>
+              <p class="ghs-benefit-description">Mia by Tanishq is part of Titan Company Limited, a TATA Group enterprise with 30+ years of jewellery expertise. Your savings are safe with us, and the jewellery you’ll buy is going to be 100% BIS Hallmarked. Rest assured that every transaction is secure.</p>
             </article>
             <article role="tabpanel" id="benefit-panel-8" aria-labelledby="benefit-tab-8" tabindex="0" hidden>
               <p class="ghs-benefit-number" aria-hidden="true">08</p>
-              <h3>Safe &amp; Risk-Free</h3>
-              <p class="ghs-benefit-description">Plan ahead for a jewellery purchase with a monthly amount you can budget for. Review the scheme terms, payment schedule and redemption conditions with a Mia expert so you can make an informed choice before enrolling.</p>
+              <h3>Safe, Simple &amp; Ideally Risk-Free</h3>
+              <p class="ghs-benefit-description">It isn’t just an investment in something random or a complicated <strong>gold investment scheme</strong>. It’s a trusted <strong>gold savings plan</strong> made just for the iconic jewellery you’ve loved for a long time. There’s no market risk involved or financial jargon in question. There are also no lock-in penalties; only worry-free savings for what you love.</p>
             </article>
           </div>
           <div class="ghs-benefit-navigation" role="group" aria-label="Navigate benefits">
@@ -427,11 +436,11 @@
       <h2 id="products-heading">Eligible products</h2>
       <p class="ghs-products-intro">The Golden Harvest Scheme benefit can be used across a wide range of eligible products.</p>
       <ul class="ghs-product-cards">
-        <li><img src="assets/Gold%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Gold Jewellery</p></li>
-        <li><img src="assets/Diamond%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Diamond Jewellery</p></li>
-        <li><img src="assets/Platinum%20jewellery%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Platinum Jewellery</p></li>
-        <li><img src="assets/Group%20338.png" width="206" height="140" alt="" loading="lazy"><p>24K Gold</p></li>
-        <li><img src="assets/Other%20products%20card%20image.png" width="206" height="140" alt="" loading="lazy"><p>Other Products</p></li>
+        <li><img src="assets/ghs-eligible-products-gold.jpg" width="206" height="140" alt="" loading="lazy"><p>Gold Jewellery</p></li>
+        <li><img src="assets/ghs-eligible-products-diamond.jpg" width="206" height="140" alt="" loading="lazy"><p>Diamond Jewellery</p></li>
+        <li><img src="assets/ghs-eligible-products-platinum.jpg" width="206" height="140" alt="" loading="lazy"><p>Platinum Jewellery</p></li>
+        <li><img src="assets/ghs-eligible-products-24kt.jpg" width="206" height="140" alt="" loading="lazy"><p>24K Gold</p></li>
+        <li><img src="assets/ghs-eligible-products-others.jpg" width="206" height="140" alt="" loading="lazy"><p>Other Products</p></li>
       </ul>
       <p class="ghs-products-note">Note: If the customer does not find a jewellery product they wish to purchase, they can also opt for 24-karat gold with 99.99% purity.</p>
     </section>
@@ -576,23 +585,49 @@
   <footer class="ghs-footer"><p>© 2026 Titan Company Limited. A TATA Enterprise.</p></footer>
   <dialog class="ghs-dialog ghs-enrol-dialog" id="enrol-dialog" aria-labelledby="enrol-heading">
     <form method="dialog"><button class="ghs-dialog-close" aria-label="Close enrolment form" type="submit">×</button></form>
-    <h2 id="enrol-heading">Golden Harvest Enrolment</h2>
+    <div class="ghs-enrol-header">
+      <p class="ghs-eyebrow">Begin Now</p>
+      <h2 id="enrol-heading">Sparkle Era Starts Here</h2>
+      <p>Our experts are here to help you</p>
+    </div>
     <!-- Provisional fields follow the existing lead form. Client approval and submission integration are pending. -->
-    <form class="ghs-enrol-form" id="enrol-form">
+    <form class="ghs-enrol-form" id="enrol-form" novalidate>
+      <section class="ghs-enrol-selected-plan" id="enrol-plan-summary" aria-labelledby="enrol-plan-heading" hidden>
+        <h3 id="enrol-plan-heading">Your Selected Plan</h3>
+        <dl>
+          <dt>Monthly instalment</dt><dd id="enrol-plan-display-monthlyInstalment"></dd>
+          <dt>You pay (11 months)</dt><dd id="enrol-plan-display-savings"></dd>
+          <dt>Mia’s bonus contribution</dt><dd id="enrol-plan-display-bonus"></dd>
+          <dt>Total jewellery value</dt><dd id="enrol-plan-display-total"></dd>
+        </dl>
+      </section>
+      <input id="enrol-plan-monthlyInstalment" name="monthlyInstalment" type="hidden" disabled>
+      <input id="enrol-plan-savings" name="savings" type="hidden" disabled>
+      <input id="enrol-plan-bonus" name="bonus" type="hidden" disabled>
+      <input id="enrol-plan-total" name="total" type="hidden" disabled>
+      <input id="enrol-plan-instalments" name="instalments" type="hidden" disabled>
+      <input id="enrol-plan-currency" name="currency" type="hidden" disabled>
       <div class="ghs-field">
         <label for="enrol-name">Your Name</label>
-        <input id="enrol-name" name="name" type="text" autocomplete="name" maxlength="100" required autofocus>
+        <input id="enrol-name" name="name" type="text" placeholder="Enter Your Name" autocomplete="name" maxlength="100" required autofocus>
       </div>
       <div class="ghs-field">
         <label for="enrol-phone">Phone Number</label>
-        <input id="enrol-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit phone number" required>
+        <input id="enrol-phone" name="phone" type="tel" placeholder="Enter Your Phone Number" autocomplete="tel-national" inputmode="tel" maxlength="24" required>
       </div>
       <div class="ghs-field">
         <label for="enrol-city">City</label>
-        <input id="enrol-city" name="city" type="text" autocomplete="address-level2" maxlength="100" required>
+        <input id="enrol-city" name="city" type="text" placeholder="Enter Your City" autocomplete="address-level2" maxlength="100" required>
       </div>
-      <button class="ghs-button" type="submit" disabled>Submit Enrolment</button>
+      <div class="ghs-enrol-errors" id="enrol-errors" role="alert" hidden></div>
+      <button class="ghs-button" type="submit" disabled>Connect Now!</button>
     </form>
+    <div class="ghs-enrol-success" id="enrol-success" role="status" hidden>
+      <span class="ghs-enrol-success-icon" aria-hidden="true">✓</span>
+      <h3 id="enrol-success-heading">Thank you!</h3>
+      <p>Your enquiry has been submitted successfully. Our experts will contact you shortly.</p>
+      <button class="ghs-button" id="enrol-success-close" type="button">Close</button>
+    </div>
   </dialog>
   <dialog class="ghs-dialog" id="plan-dialog" aria-labelledby="dialog-heading">
     <form method="dialog"><button class="ghs-dialog-close" aria-label="Close" type="submit">×</button></form>
