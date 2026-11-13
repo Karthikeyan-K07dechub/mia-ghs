@@ -39,7 +39,6 @@
     updatePreview();
   }));
 
-  document.getElementById('about-start-plan').addEventListener('click', () => range.focus({ preventScroll: true }));
 
 
   document.getElementById('start-plan').addEventListener('click', () => {
@@ -116,7 +115,13 @@
       document.getElementById(`enrol-plan-display-${key}`).textContent = plan ? format(plan[key]) : '';
     }
   }
-  ['explore-plan', 'how-it-works', 'journey-enrol', 'closing-enrol'].forEach(id => {
+  document.getElementById('how-it-works').addEventListener('click', () => {
+    document.getElementById('process-heading').closest('section').scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+      block: 'start'
+    });
+  });
+  ['explore-plan', 'about-start-plan', 'journey-enrol', 'closing-enrol'].forEach(id => {
     document.getElementById(id).addEventListener('click', () => {
       setEnrolPlan(null);
       openEnrolDialog();

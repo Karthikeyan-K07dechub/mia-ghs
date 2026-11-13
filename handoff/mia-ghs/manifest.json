@@ -2,9 +2,9 @@
   "rootId": "mia-ghs-landing",
   "generatedAt": "2026-11-04T09:10:07.614Z",
   "sourceSHA256": {
-    "index.html": "09e15fed8d5ce0a3758dd7494bdab992b2561035371d9199f7756be2a0e1857d",
-    "styles.css": "1b02cd1ef4b8638925f81204bda1dbdf84252df61403b5cc686a48ddd868c9e9",
-    "script.js": "d299de9497e822ae322327821c06b07b61940af63ecbe01a85ceb0a5e8f6e101"
+    "index.html": "e2dc3d8d8de0117e7b14e45e6d068931215f409a99439aadda71446ef92abd47",
+    "styles.css": "6a10cf8deee87a21be42a6ef8bac544d8728e7da470df9270ea76f66ad26287c",
+    "script.js": "92a4393c1ce2b131756d9392cd7f3357796f626524f80d5c2b1422c4ba933d58"
   },
   "idMap": {
     "ghs-heading": "mia-ghs-ghs-heading",
